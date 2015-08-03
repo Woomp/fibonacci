@@ -14,4 +14,4 @@ A minimal python project for integration test purposes.
 Features
 --------
 
-* Calculate Fibonacci Numbers
+* Calculate Fibonacci Numbers using an iterative algorithm.
