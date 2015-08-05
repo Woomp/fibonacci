@@ -38,7 +38,7 @@ class Tox(TestCommand):
 
 setup(
     name='fibonacci',
-    version='0.1.0',
+    version='0.3.0',
     description="A minimal python project for integration test purposes.",
     long_description=readme + '\n\n' + history,
     author="Maik Figura",
@@ -53,7 +53,7 @@ setup(
     zip_safe=False,
     keywords='fibonacci',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
