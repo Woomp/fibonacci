@@ -6,6 +6,7 @@ Tests for `fibonacci` module.
 """
 
 import pytest
+
 from fibonacci import fibonacci
 
 TEST_DATA = (
