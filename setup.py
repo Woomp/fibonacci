@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-\
 
+from setuptools import find_packages
 from setuptools.command.test import test as TestCommand
 import sys
 
@@ -8,7 +9,6 @@ try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
-
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -30,7 +30,7 @@ class Tox(TestCommand):
         self.test_suite = True
 
     def run_tests(self):
-        #import here, cause outside the eggs aren't loaded
+        # import here, cause outside the eggs aren't loaded
         import tox
         errcode = tox.cmdline(self.test_args)
         sys.exit(errcode)
@@ -38,17 +38,14 @@ class Tox(TestCommand):
 
 setup(
     name='fibonacci',
-    version='0.1.0',
+    version='0.3.0',
     description="A minimal python project for integration test purposes.",
     long_description=readme + '\n\n' + history,
     author="Maik Figura",
     author_email='maiksensi@gmail.com',
     url='https://github.com/maiksensi/fibonacci',
-    packages=[
-        'fibonacci',
-    ],
-    package_dir={'fibonacci':
-                 'fibonacci'},
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     include_package_data=True,
     install_requires=requirements,
     cmdclass={'test': Tox},
@@ -56,7 +53,7 @@ setup(
     zip_safe=False,
     keywords='fibonacci',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
