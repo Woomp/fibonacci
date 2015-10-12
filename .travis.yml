@@ -12,6 +12,9 @@ env:
 
 script: tox -e $TOX_ENV
 
+before_install:
+  - pip install codecov
+
 install:
     - pip install tox
 
